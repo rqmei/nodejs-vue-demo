@@ -1,0 +1,26 @@
+// 没有数据
+.no-data-empty {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0px;
+
+    .no-data-empty-content {
+        text-align: center;
+        .no-data-img{
+            min-width: 650px;
+            min-height: 180px;
+        }
+
+        .title-wrap {
+            //margin-top: 10px;
+            color: #666666;
+        }
+        .button-group{
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
