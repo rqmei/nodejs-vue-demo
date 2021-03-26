@@ -7,8 +7,8 @@ function resolve(dir) {
 }
 
 const globalTitle = defaultSettings.title || "替比营销系统";
-// 服务地址
-const port = process.env.port || process.env.npm_config_port || 8200;
+// 服务地址 （ process.env：包含用户环境信息的对象。）
+const port = process.env.port || process.env.npm_config_port || 8300;
 // 是否是生产环境和预发布
 const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
 
@@ -20,7 +20,7 @@ const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
  * @type {{outputDir: string, productionSourceMap: boolean, assetsDir: string, lintOnSave: boolean, publicPath: string}}
  */
 module.exports = {
-    publicPath:"/",// 部署应用包时的基本 URL 设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径
+    publicPath: "/",// 部署应用包时的基本 URL 设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径
     outputDir: "dist", // 当运行 vue-cli-service build 时生成的生产环境构建文件的目录
     assetsDir: "static", //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
     lintOnSave: process.env.NODE_ENV === "development", // 在开发环境下是否启用当 eslint-loader
